@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.univac.autogestionPadres" version="21.2021.1" xmlns="https://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>UNIVAC Autogestion Padres</name>
+    <description>
+        Sistema de Autogestión para padres. Puede acceder a la información de los alumnos que estén cursando en las instituciones que gestionan la información académica por medio de UNIVAC SGE . La app esta orientada a los niveles iniciales, primario y secundario. Dependiendo del nivel podras consulta notas, inasistencias y sanciones del alumno.
+    </description>
+    <author email="univac.isi@gmail.com" href="https://www.univac.com.ar">
+        UNIVAC Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <preference name="android-targetSdkVersion" value="29" />
+    
+    <platform name="android">
+        <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
+        <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
+        <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
+        <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
+        <splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
+        <splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
+        <splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
+        <splash density="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
+        <splash density="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
+        <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
+        <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
+        <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
+        <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
+    </platform>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

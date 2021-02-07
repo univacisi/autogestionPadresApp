@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma donde los padres podrá consultar notas, inasistencias y sanciones de los alumnos que pertenecen a los Colegios que forman parte de UNIVAC ISI.">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="univac, colegio, padres, educacion, escuela, alumnos">
+
+    <title>El Colegio En Casa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="login-page">
+
+        <div class="container">
+            <!--<a href="https://www.elcolegioencasa.edu.ar" class="btn btn-default  btn-sm"><i
+                    class="fa fa-angle-left"></i> Volver Pagina principal</a>-->
+            <form id="formularioLoguin" class="form-login" action="https://www.elcolegioencasa.edu.ar">
+                <h2 class="form-login-heading">Ingresar</h2>
+                <div class="login-wrap">
+                    <input type="text" class="form-control" id="dniAlumno" placeholder="DNI alumno" maxlength="8"
+                        onkeypress="return justNumbers(event);" autofocus required>
+                    <br>
+                    <input type="text" class="form-control" id="dniUsuario" placeholder="DNI Madre/Padre/Tutor"
+                        maxlength="8" onkeypress="return justNumbers(event);" required>
+                    <br>
+                    <select class="form-control" id="selectTutor" required>
+                        <option value="" disabled selected>Seleccione Rol...</option>
+                        <option value="1">Tutor</option>
+                        <option value="2">Madre</option>
+                        <option value="3">Padre</option>
+                    </select>
+                    <br>
+                    <input type="password" class="form-control" id="pass" placeholder="Contraseña" maxlength="20"
+                        required>
+                    <label class="checkbox">
+                        <span class="pull-right">
+                            <a href="https://autogestionpadres.elcolegioencasa.edu.ar/recuperar-pass.html"> Recuperar
+                                contraseña</a>
+                        </span>
+                    </label>
+                    <button class="btn btn-theme btn-block" type="submit" id="botonIngresar"><i class="fa fa-lock"></i>
+                        INGRESAR </button>
+                    <hr>
+
+                    <div class="registration">
+                        No tenes cuenta?<br />
+                        <a class="" href="crear-cuenta.html">
+                            Crear Cuenta
+                        </a>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+
+
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", { speed: 500 });
+    </script>
+
+    <script src="assets/js/scripts/api.js" type="text/javascript"></script>
+    <script src="assets/js/scripts/util.js" type="text/javascript"></script>
+    <script src="assets/js/scripts/acceso-padres.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        AccesoPadres.init();
+    </script>
+
+
+<script>
+    $(window).load(function () {
+    codigo = localStorage.getItem('alumno_codigo');
+    Nivel = localStorage.getItem('alumno_nivel');
+
+    if (codigo !== null && codigo !== '' && Nivel !== null && Nivel !== '') {
+        window.location.assign('cursado.html');
+    }
+});
+
+</script>
+
+</body>
+
+</html>

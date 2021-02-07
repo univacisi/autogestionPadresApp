@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma donde los padres podrá consultar notas, inasistencias y sanciones de los alumnos que pertenecen a los Colegios que forman parte de UNIVAC ISI.">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="univac, colegio, padres, educacion, escuela, alumnos">
+
+    <title>El Colegio En Casa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+   
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="assets/css/HoldOn.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <div id="login-page">
+        <div class="container">
+
+
+            <!-- BASIC FORM ELELEMNTS -->
+            <div class="row mt">
+                <div class="form-panel">
+                    <a href="index.html" class="btn btn-theme  btn-lg"><i class="fa fa-angle-left"></i> Volver</a>
+                    <h1>Crea cuenta </h1>
+                    <p>Rellene el formulario, envíe los datos solicitados y le activaremos la cuenta.</p>
+
+                    <form class="form-horizontal style-form" method="get">
+
+                        <!-- COLEGIO -->
+                        <h4 class="mb"><i class="fa fa-angle-right"></i> Colegio</h4>
+                        <div class="form-group" style="margin-left: 0px;margin-right: 0px;">
+                            <div class="col-sm-12">
+                                <label class="control-label">Seleccione Nivel</label>
+                                <select class="form-control" id="selectNivel" required>
+                                    <option> </option>
+                                    <option value="I"> Nivel Inicial </option>
+                                    <option value="P"> Nivel Primario</option>
+                                    <option value="M"> Nivel Medio/Secundario</option>
+                                    <option value="S"> Nivel Secundario Adulto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 0px;margin-right: 0px;">
+                            <div class="col-md-12">
+                                <label class="control-label">Seleccione Colegio</label>
+                                <select class="form-control" id="selectColegios">
+                                </select>
+                                <label> <small>*Si no aparece la institucion al que su hijo asiste es por que todavia la
+                                        institucion no adquirio este servicio. Cualquier duda o consulta, comuniquese
+                                        con la institucion.</small></label>
+                            </div>
+                        </div>
+
+                        <!-- DATOS ALUMNOS  -->
+                        <div id="contenedorDatosAlumno" class="hide">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Datos Alumno</h4>
+                            <div class="form-group" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="form-row">
+
+                                    <div class="col-md-5">
+                                        <label>Dni</label>
+                                        <input type="text" class="form-control" maxlength="8" placeholder=""
+                                            aria-label="Recipient's username" aria-describedby="basic-addon2" size="8"
+                                            id="codigoAlumno" onkeypress="return valida(event)" required>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label> </label>
+                                        <button class="form-control btn btn-warning" type="button"
+                                            id="botonBuscarAlumno">Buscar</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Apellido y Nombre</label>
+                                        <input type="text" class="form-control" placeholder="" id="nombreAlumno"
+                                            disabled required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DATOS MADRE/PADRE/TUTOR -->
+                        <div id="contenedorDatosTutor" class="hide">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Madre/Padre/Tutor</h4>
+                            <div class="form-group" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="form-row">
+                                    <div class="col-md-3">
+                                        <label>Dni</label>
+                                        <input type="text" class="form-control" maxlength="8" placeholder=""
+                                            id="codigoTutor" size="8" onkeypress="return valida(event)" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>Rol</label>
+                                        <select class="form-control" id="selectTutor" required>
+                                            <option> </option>
+                                            <option value="1">Tutor</option>
+                                            <option value="2">Madre</option>
+                                            <option value="3">Padre</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label>
+                                            .
+                                        </label>
+                                        <button class="form-control btn btn-warning" type="button"
+                                            id="botonBuscarTutor">Buscar</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Apellido y Nombre</label>
+                                        <input type="text" class="form-control" placeholder="" id="nombreTutor" disabled
+                                            required>
+                                    </div>
+                                </div>
+                                <div id="contenedorDatosTutor1" class="hide">
+
+                                    <div class="form-row">
+                                        <div class="col-md-12">
+                                            <label>Correo electronico</label>
+                                            <input type="email" class="form-control" id="correoTutor" placeholder=""
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label>Contraseña</label>
+                                            <input type="password" class="form-control" maxlength="15" id="pass1"
+                                                placeholder="" required>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Repetir Contraseña</label>
+                                            <input name="pass2" class="form-control" maxlength="15" id="pass2"
+                                                onkeyup="checkPass(); return false;" type="password" required>
+                                            <!--<input type="password" class="form-control"  id="pass2" placeholder="" required>-->
+                                            <span id="confirmMessage" class="confirmMessage"></span>
+                                        </div>
+
+
+
+                                        <div class="col-md-12">
+                                            <label></label>
+                                        </div>
+
+                                        <div class="col-md-12 text-right">
+                                            <button class="btn btn-lg btn-block btn-primary" id="botonRegistrar"
+                                                disabled>Registrarse</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div><!-- col-lg-12-->
+        </div><!-- /row -->
+    </div>
+
+
+
+
+
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/HoldOn.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", { speed: 500 });
+    </script>
+
+
+    <!-- CONEXION CON API -->
+    <script src="assets/js/scripts/api.js" type="text/javascript"></script>
+    <script src="assets/js/scripts/util.js" type="text/javascript"></script>
+    <script src="assets/js/scripts/crear-cuenta.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        CrearCuenta.init();
+    </script>
+    <!-- FIN CONEXION CON API -->
+
+</body>
+
+</html>

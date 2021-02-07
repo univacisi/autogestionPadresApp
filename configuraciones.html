@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Univac Ingeniería en Sistemas">
+  <meta name="keyword" content="">
+
+  <title>Univac Autogestión Padres</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <!--external css-->
+  <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-responsive.css" rel="stylesheet">
+  <link href="assets/css/HoldOn.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Menú"></div>
+      </div>
+      <!--logo start-->
+      <a href="cursado.html" class="logo"><b>Autogestión Padres</b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+
+      </div>
+      <div class="top-menu">
+
+      </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+          <p class="centered"><a href="cursado.html"><img src="assets/img/ui-sam.png" class="img-circle" width="60"></a>
+          </p>
+          <h5 class="centered" id="bienvenida"></h5>
+          <h5 class="centered" id="nombreUsuario"></h5>
+
+
+
+          <li class="sub-menu">
+            <a href="cursado.html">
+              <i class="fa fa-user"></i>
+              <span>Cursado</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="notificaciones.html">
+              <i class="fa fa-envelope"></i>
+              <span>Notificaciones</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="configuraciones.html">
+              <i class="fa fa-cog"></i>
+              <span>Configuraciones</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <button id="cerrarSesion" class="btn btn-theme  btn-block">Salir</button>
+          </li>
+
+
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <!--wrapper -->
+      <section class="wrapper site-min-height">
+
+        <div class="row mt">
+          <div class="col-lg-12">
+            <!-- panel -->
+            <div class="form-panel">
+              <h2 class=""><i class="fa fa-angle-right"></i><label id="alumnoNombre"></label></h2>
+              <h6> <label><strong>Colegio:</strong></label> <label id="colegioNombre"></label></h6>
+              <hr>
+
+              <h3><strong>Configuraciones</strong></h3>
+              <p>*Si alguno de los siguientes datos no coinciden, por favor acercarce a la institución para modificarlos
+              </p>
+              <div class="panel-body">
+
+                <div class="col-md-6 panel">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-user"> </i> Nombre</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="cNombre"></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-clipboard"> </i> DNI</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="cDni"> </p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-phone"> </i> Teléfono</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="cTelefono"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 panel">
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-map-marker"> </i> Dirección</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="cDireccion"></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-envelope"> </i> Correo</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="cCorreo"> </p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class=""><i class="fa fa-key"> </i> Contraseña</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <a href="#" data-toggle="modal" data-target="#myModal">Cambiar Contraseña </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!--Modal-->
+
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Cambiar Contraseña</h4>
+                  </div>
+                  <div class="modal-body">
+                    <label>Nueva contraseña</label>
+                    <input type="password" class="form-control" maxlength="15" id="pass1" placeholder="" required>
+
+                    <label>Repetir nueva contraseña</label>
+                    <input name="pass2" class="form-control" maxlength="15" id="pass2"
+                      onkeyup="checkPass(); return false;" type="password" required>
+                    <!--<input type="password" class="form-control"  id="pass2" placeholder="" required>-->
+                    <span id="confirmMessage" class="confirmMessage"></span>
+                    <p>Contraseña Actual </p>
+                    <input class="form-control contrasenia" type="password" id="pass3" maxlength="15">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary btnContrasenia">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fin modal-->
+            <!-- /panel -->
+          </div>
+        </div>
+
+      </section>
+      <!--/wrapper -->
+    </section>
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        Creado por UNIVAC Ingeniería en Sistemas de Información
+        <a href="" class="go-top">
+          <i class="fa fa-angle-up"></i>
+        </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery.js"></script>  
+  <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+  <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="assets/js/jquery.scrollTo.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/HoldOn.min.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <!-- CONEXION API-->
+  <script src="assets/js/scripts/api.js" type="text/javascript"></script>
+  <script src="assets/js/scripts/util.js" type="text/javascript"></script>
+  <script src="assets/js/scripts/configuracion.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    Configuracion.init();
+  </script>
+
+  <script src="assets/js/scripts/perfiles.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    Perfiles.init();
+    sesionCerrada();
+  </script>
+
+
+  <!--common script for all pages-->
+  <script src="assets/js/common-scripts.js"></script>
+
+  <!--script for this page-->
+
+
+
+</body>
+
+</html>
