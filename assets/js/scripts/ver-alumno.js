@@ -438,9 +438,9 @@ var VerAlumno = function () {
         for (var i = 0; i < datos.length; i++) {
             d += '<tr>' +
                     '<td>' + datos[i].nombre + '</td>' +
-                    '<td>' + notaCorrecta(datos[i].r343_1) + '</td>' +
-                    '<td>' + notaCorrecta(datos[i].r343_2) + '</td>' +
                     '<td>' + notaCorrecta(datos[i].definitiva) + '</td>' +
+                    '<td>' + notaCorrecta(datos[i].r343_2) + '</td>' +
+                    '<td>' + notaCorrecta(datos[i].r343_1) + '</td>' +
                 '</tr>';
         }
         $("#tablaNotasMedioCuarentena").append(d);
