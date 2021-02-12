@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.univac.autogestionPadres" version="12.2021.2" xmlns="https://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.univac.autogestionPadres" version="47.12.2021.2" xmlns="https://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>UNIVAC Autogestion Padres</name>
     <description>
         Sistema de Autogestión para padres. Puede acceder a la información de los alumnos que estén cursando en las instituciones que gestionan la información académica por medio de UNIVAC SGE . La app esta orientada a los niveles iniciales, primario y secundario. Dependiendo del nivel podras consulta notas, inasistencias y sanciones del alumno.
